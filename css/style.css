@@ -1,0 +1,903 @@
+@charset "utf-8";
+
+/* 全体 */
+:root {
+	font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", serif;
+}
+
+@media screen and (max-width: 599px) {
+	:root {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	:root {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	:root {
+		font-size: 18px;
+	}
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#navback {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+
+#navback path {
+	width: 100%;
+	height: 100%;
+}
+
+.groval-nav {
+	width: 200px;
+	height: calc(80px * 5 + 38px);
+	background-color: rgba(96,168,255,0.5);
+	position: fixed;
+	z-index: 4;
+	border-radius: 5px;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px 5px rgba(39,151,255,0.5) inset;
+	right: 20px;
+	top: 80px;
+	display: none;
+}
+
+.groval-nav #nav-close {
+	display: block;
+	float: right;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+	transition: color 0.5s;
+}
+
+.groval-nav #nav-close:hover {
+	color: red;
+}
+
+.groval-nav ul {
+	margin-top: 30px;
+}
+
+.groval-nav ul li a {
+	display: inline-block;
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	transition: color 0.5s;
+}
+
+.groval-nav .nav_home::before, .groval-nav .nav_home::after, .groval-nav .nav_profile::after, .groval-nav .nav_content::after, .groval-nav .nav_contact::after {
+	display: block;
+	content: "";
+	width: 90%;
+	height: 2px;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.groval-nav .nav_home:hover {
+	color: #FFE352;
+}
+
+.groval-nav .nav_profile:hover {
+	color: #FF882C;
+}
+
+.groval-nav .nav_content:hover {
+	color: #FF4D50;
+}
+
+.groval-nav .nav_contact:hover {
+	color: #70EFFF;
+}
+
+.groval-nav .nav_publicity:hover {
+	color: #94FF62;
+}
+
+.title-underline {
+	width: 100%;
+	height: 2px;
+	background-image: linear-gradient(90deg, rgba(255,231,71,1.00), rgba(255,231,71,0));
+}
+
+
+/* ヘッダー */
+header {
+	display: flex;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 3;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+header a {
+	cursor: pointer;
+}
+
+header #logo {
+	width: 80px;
+	height: 80px;
+	margin-left: 30px;
+}
+
+header #backhome {
+	display: none;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: white;
+	margin-left: auto;
+	position: relative;
+	z-index: 1;
+	text-shadow: 2px 2px 5px white;
+}
+
+header #menubar {
+	display: block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 1.5rem;
+	cursor: pointer;
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+
+
+/* メイン */
+main {
+	width: 100%;
+	height: 100%;
+}
+
+/* ホーム */
+.home {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+
+/* メイン : ホーム */
+.home .home-content {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20%;
+}
+
+.home .home-content #profile-icon {
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	transition: box-shadow 1s, background-image 0.5s;
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+
+.home .home-content #profile-icon img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.home .home-content .profile-icon-hover::before {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	content: "";
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+}
+
+.home .home-content #topmessage {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3rem;
+	line-height: 1.8em;
+	margin-top: 10px;
+}
+
+.home .home-content .sns-links {
+	position: absolute;
+	z-index: 0;
+}
+
+.home .home-content .sns-links #rootobj {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(96,168,255,0.5);
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px 5px rgba(39,151,255,0.5) inset;
+	color: white;
+	line-height: 50px;
+	font-size: 25px;
+	cursor: pointer;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+.home .home-content .sns-links #rootobj i {
+	opacity: 0.7;
+}
+
+.home .home-content .sns-links a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background-color: rgba(96,168,255,0.5);
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 10px 5px rgba(39,151,255,0.5) inset;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+.home .home-content .sns-links a i {
+	opacity: 0.7;
+}
+
+.home .home-content .sns-links #googleplus {
+	top: 60px;
+	left: 30px;
+	opacity: 0;
+}
+
+.home .home-content .sns-links #twitter {
+	top: 125px;
+	left: 40px;
+	opacity: 0;
+}
+
+.home .home-content .sns-links #facebook {
+	top: 185px;
+	left: 10px;
+	opacity: 0;
+}
+
+.home .home-content .sns-links #rootobj:hover {
+	color: rgba(255,84,86,1.00);
+	background-color: white;
+}
+
+.home .home-content .sns-links #googleplus:hover {
+	color: red;
+	background-color: white;
+}
+
+.home .home-content .sns-links #twitter:hover {
+	color: rgba(54,152,255,1.00);
+	background-color: white;
+}
+
+.home .home-content .sns-links #facebook:hover {
+	color: rgba(37,50,126,1.00);
+	background-color: white;
+}
+
+/* ナビゲーション : ホーム */
+.home nav {
+	display: none;
+}
+
+.home nav .nav_home:hover {
+	color: #FFE352;
+}
+
+.home nav .nav_profile:hover {
+	color: #FF882C;
+}
+
+.home nav .nav_content:hover {
+	color: #FF4D50;
+}
+
+.home nav .nav_contact:hover {
+	color: #70EFFF;
+}
+
+.home nav .nav_publicity:hover {
+	color: #94FF62;
+}
+
+
+/* プロフィール */
+.profile {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 2;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	display: none;
+}
+
+.profile .wrap {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/profile.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	opacity: 0;
+	transition: opacity 0.5s;
+	overflow: auto;
+}
+
+/* メイン : プロフィール */
+.profile .introduction {
+	width: 80%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.profile .comment {
+	width: 80%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+
+.profile .title {
+	width: 100%;
+	font-size: 2rem;
+	padding: 5px;
+}
+
+.profile .textarea {
+	width: 100%;
+	padding: 20px 20px;
+	font-family: 'Montserrat', "M PLUS Rounded 1c", sans-serif;
+	font-size: 1.1rem;
+	line-height: 1.5em;
+	letter-spacing: 3px;
+}
+
+.profile #status {
+	display: flex;
+}
+
+.profile dl {
+	flex: 1;
+}
+
+.profile dl dt {
+	width: 80px;
+	float: left;
+	padding: 5px 0;
+}
+
+.profile dl dd {
+	margin-left: 80px;
+	padding: 5px 0;
+}
+
+
+/* コンテンツ */
+.content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+.content .wrap {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/content.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	opacity: 0;
+	transition: opacity 0.5s;
+	overflow: auto;
+}
+
+/* メイン : コンテンツ */
+.content .contents {
+	width: 80%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-top: 100px;
+	padding-bottom: 40px;
+}
+
+.content .contents .container {
+	width: 100%;
+}
+
+.content .contents .title {
+	width: 80%;
+	font-size: 2rem;
+	padding: 5px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.content .contents .content-box {
+	width: calc(100% - 20px);
+	background-color: white;
+	box-shadow: 0 3px 5px 2px gray;
+	border-radius: 10px;
+	margin-top: 40px;
+	padding: 10px;
+}
+
+.content .contents .content-title {
+	display: block;
+	margin-top: 5px;
+	text-decoration-color: #4F4F4F;
+}
+
+.content .contents .content-title h3 {
+	color: #4F4F4F;
+	font-size: 1.5rem;
+	line-height: 30px;
+	transition: color 0.3s;
+}
+
+.content .contents .content-title:hover {
+	color: #FF4D50;
+}
+
+.content .contents .textarea {
+	margin-top: 8px;
+	font-size: 1.2rem;
+	font-family: "M PLUS Rounded 1c", sans-serif;
+	padding: 0 10px;
+	letter-spacing: 2px;
+}
+
+.content .contents .content-image {
+	display: block;
+  width: 100%;
+	margin: 20px auto 0 auto;
+	max-width: 100%;
+}
+
+.content .contents .content-image source,
+.content .contents .content-image img {
+  display: block;
+  width: 100%;
+}
+
+
+/* コンタクト */
+.contact {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+.contact .wrap {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/contact.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	opacity: 0;
+	transition: opacity 0.5s;
+	overflow: auto;
+}
+
+.contact .title {
+	width: 80%;
+	font-size: 2rem;
+	padding: 5px;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* SNSリンク : コンタクト */
+.contact .sns-links {
+	width: 80%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.contact .sns-links .textarea {
+	display: flex;
+	width: 100%;
+	margin: 40px auto;
+	justify-content: center;
+}
+
+.contact .sns-links .textarea a {
+	display: flex;
+	background-color: rgba(96,168,255,0.8);
+	box-shadow: 0 0 10px 2px gray inset, 0 2px 10px 2px white;
+	border: 2px solid gray;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	font-size: 4rem;
+	text-decoration: none;
+	color: white;
+	transition: color 0.5s, background-color 0.5s;
+	padding: 30px;
+	margin: 0 40px;
+}
+
+.contact .sns-links .textarea .googleplus:hover {
+	color: red;
+	background-color: white;
+}
+
+.contact .sns-links .textarea .twitter:hover {
+	color: rgba(54,152,255,1.00);
+	background-color: white;
+}
+
+.contact .sns-links .textarea .facebook:hover {
+	color: rgba(37,50,126,1.00);
+	background-color: white;
+}
+
+/* メールアドレス : コンタクト */
+.contact .mail-address {
+	width: 80%;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+
+.contact .mail-address address {
+	font-size: 2rem;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin-top: 40px;
+	color: white;
+	text-shadow: 1px 1px 20px white;
+}
+
+
+/* ページリスト */
+.pagelist {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	display: none;
+}
+
+.pagelist .wrap {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/pagelist.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+/* ナビゲーション : ページリスト */
+.pagelist nav {
+	width: calc(70% - 4px);
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	display: none;
+}
+
+.pagelist nav ul li a {
+	display: block;
+	width: 100%;
+	height: 14vh;
+	line-height: 14vh;
+	text-align: center;
+	text-decoration: none;
+	font-size: 2.5rem;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	border: 2px solid rgba(255,250,140,0.5);
+	transition: color 0.5s;
+	cursor: pointer;
+}
+
+.pagelist nav .nav_home {
+	margin-bottom: 10px;
+}
+
+.pagelist nav .nav_profile {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pagelist nav .nav_content {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pagelist nav .nav_contact {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pagelist nav .nav_publicity {
+	margin-top: 10px;
+}
+
+.pagelist nav .nav_home:hover {
+	color: #FFE352;
+}
+
+.pagelist nav .nav_profile:hover {
+	color: #FF882C;
+}
+
+.pagelist nav .nav_content:hover {
+	color: #FF4D50;
+}
+
+.pagelist nav .nav_contact:hover {
+	color: #70EFFF;
+}
+
+.pagelist nav .nav_publicity:hover {
+	color: #94FF62;
+}
+
+
+/* 大きい画面 */
+@media screen and (min-width: 1025px) {
+	/* メイン : ホーム */
+	.home .home-content {
+		position: absolute;
+		padding-top: 0;
+		top: 24%;
+		left: 15%;
+		width: 603.083px;
+	}
+	
+	.home .home-content #profile-icon {
+		width: 200px;
+		height: 200px;
+	}
+	
+	.home .home-content .sns-links #rootobj {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 40px;
+	}
+	
+	.home .home-content .sns-links a {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 40px;
+	}
+	
+	.home .home-content .sns-links #googleplus {
+		top: 70px;
+		left: 40px;
+	}
+	
+	.home .home-content .sns-links #twitter {
+		top: 145px;
+		left: 60px;
+	}
+	
+	.home .home-content .sns-links #facebook {
+		top: 220px;
+		left: 30px;
+	}
+	
+	
+	/* ナビゲーション : ホーム */
+	.home nav {
+		position: relative;
+		z-index: 2;
+		float: right;
+		overflow: hidden;
+		margin-top: 18vh;
+		margin-right: 4vw;
+		display: none;
+	}
+	
+	.home nav ul li {
+		margin-bottom: 15%;
+	}
+	
+	.home nav ul li a {
+		display: block;
+		text-decoration: none;
+		font-size: 2vw;
+		font-family: 'Montserrat', sans-serif;
+		color: white;
+		line-height: 8vh;
+		transition: color 0.5s;
+		cursor: pointer;
+	}
+	
+	/* メイン : コンテンツ */
+	.content .contents .container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.content .contents .content-box {
+		width: calc(50% - 70px);
+		margin-right: 30px;
+	}
+	
+	.content .contents .content-right {
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	/* SNSリンク : コンタクト */
+	.contact .sns-links .textarea a {
+		padding: 50px;
+	}
+	
+	/* メールアドレス : コンタクト */
+	.contact .mail-address address {
+		font-size: 2.5rem;
+		margin-top: 60px;
+	}
+}
+
+
+/* 小さい画面 */
+@media screen and (max-width: 599px) {
+	.groval-nav {
+		top: 60px;
+	}
+	
+	/* ヘッダー */
+	header {
+		height: 60px;
+	}
+	
+	header #logo {
+		width: 60px;
+		height: 60px;
+		margin-left: 10px;
+	}
+	
+	header #backhome {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+	
+	header #menubar {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+	
+	header .toolbar a {
+		line-height: 60px;
+	}
+	
+	
+	/* メイン : ホーム */
+	.home .home-content {
+		padding-top: 40%;
+	}
+	
+	.home .home-content #profile-icon {
+		width: 120px;
+		height: 120px;
+	}
+	
+	.home .home-content #topmessage {
+		font-size: 1.9rem;
+	}
+	
+	.home .home-content .sns-links #rootobj {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 25px;
+	}
+	
+	.home .home-content .sns-links a {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 25px;
+	}
+	
+	.home .home-content .sns-links #googleplus {
+		top: 50px;
+		left: 30px;
+	}
+	
+	.home .home-content .sns-links #twitter {
+		top: 105px;
+		left: 35px;
+	}
+	
+	.home .home-content .sns-links #facebook {
+		top: 155px;
+		left: 20px;
+	}
+	
+	/* ナビゲーション : ホーム */
+	.home nav {
+		display: none;
+	}
+	
+	
+	/* メイン : プロフィール */
+	.profile #status {
+		display: block;
+	}
+	
+	/* SNSリンク : コンタクト */
+	.contact .sns-links .textarea a {
+		padding: 15px;
+		margin: 10px;
+	}
+	
+	/* メールアドレス : コンタクト */
+	.contact .mail-address address {
+		font-size: 1.5rem;
+		margin-top: 30px;
+	}
+}

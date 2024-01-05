@@ -1,0 +1,109 @@
+/* Staff Introduction Style */
+
+.introduction {
+	display: flex;
+}
+
+.director .person-image {
+	margin-top: -40px;
+}
+
+.director .staff-info {
+	margin-right: 8%;
+}
+
+.photo-right {
+	flex-flow: row-reverse;
+}
+
+.staff .photo-right .person-image {
+	margin-top: -40px;
+}
+
+.staff .photo-right .staff-info {
+	margin-right: 8%;
+}
+
+.staff .photo-left .person-image {
+	margin-top: 8px;
+}
+
+.staff .photo-left .staff-info {
+	margin-top: 40px;
+	margin-left: 8%;
+}
+
+.section-body img {
+	display: block;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.staff .subject {
+	margin-bottom: 24px;
+}
+
+.staff .section-body {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.name {
+	font-weight: bold;
+}
+
+.staff .introduction:not(:first-child) {
+	margin-top: 90px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 599px) {
+	.introduction {
+		display: block;
+	}
+	
+	.director .person-image {
+		margin-top: 20px;
+	}
+	
+	.staff-info {
+		margin-top: 16px;
+	}
+	
+	.staff .photo-left .staff-info {
+		margin-top: 16px;
+		margin-left: 0;
+	}
+	
+	.staff .person-image {
+		margin-top: 30px
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	.introduction {
+		display: block;
+	}
+	
+	.director .person-image {
+		margin-top: 20px;
+	}
+	
+	.staff-info {
+		margin-top: 16px;
+	}
+	
+	.staff .photo-left .staff-info {
+		margin-top: 16px;
+		margin-left: 0;
+	}
+	
+	.staff .person-image {
+		margin-top: 30px
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	
+}

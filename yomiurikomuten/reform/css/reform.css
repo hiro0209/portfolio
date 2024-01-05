@@ -1,0 +1,47 @@
+/* Reform Style */
+
+/* Introduction */
+#introduction {
+	display: flex;
+}
+
+#introduction a {
+	margin-left: 11.5%;
+}
+
+#introduction img {
+	display: block;
+	width: 372px;
+	height: 248px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Be Worried */
+#be-worried ul {
+	list-style: disc;
+	padding-left: 22px;
+}
+
+#be-worried ul li {
+	line-height: 1.5rem;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 599px) {
+	/* Introduction */
+	#introduction {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	/* Introduction */
+	#introduction {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	
+}

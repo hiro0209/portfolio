@@ -1,0 +1,28 @@
+/* Question Style */
+
+dl dt::before {
+	display: block;
+	content: "Q.";
+	padding-right: 16px;
+}
+
+dl dd::before {
+	display: block;
+	content: "A.";
+	padding-right: 16px;
+}
+
+dl dt, dl dd {
+	display: flex;
+	width: 100%;
+	line-height: 2rem;
+}
+
+dl dt:not(:first-child) {
+	padding-top: 16px;
+}
+
+dl dd:not(:last-child) {
+	border-bottom: dashed 1px #3C3C3C;
+	padding-bottom: 16px;
+}

@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HIROTO SUDO's Portfolio</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<!--Web Font-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<link rel="stylesheet" href="https://kit.fontawesome.com/7f6ab62662.css" crossorigin="anonymous">
+<!--JavaScript Library-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+<svg id="navback" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<path fill="#000000"></path>
+</svg>
+<nav class="groval-nav">
+	<a id="nav-close" onClick="$('.groval-nav').slideUp();"><i class="fas fa-times"></i></a>
+	<ul>
+		<li><a class="nav_home">HOME</a></li>
+		<li><a class="nav_profile">PROFILE</a></li>
+		<li><a class="nav_content">CONTENT</a></li>
+		<li><a class="nav_contact">CONTACT</a></li>
+		<!--<li><a class="nav_publicity">PUBLICITY</a></li>-->
+	</ul>
+</nav>
+	
+<header>
+	<a href="index.html"><img id="logo" src="images/logo_large.png" alt=""></a>
+	<a id="backhome"><i class="fas fa-long-arrow-alt-left"></i></a>
+	<a id="menubar" onClick="changePage('pagelist', 'home')"><i class="fas fa-bars"></i></a>
+</header>
+	
+<main>
+	<section class="home">
+		<div class="home-content">
+			<a id="profile-icon" onClick="homeSnslinksAnimation();"><img src="images/jidori.png" alt="須藤寛人"></a>
+			<div class="sns-links">
+				<a id="rootobj" onClick="homeSnslinksAnimation2();"><i class="far fa-circle"></i></a>
+				<a id="googleplus" href="https://plus.google.com/u/0/100743151085824122879"><i class="fab fa-google-plus"></i></a>
+				<a id="twitter" href="https://x.com/sudo_hiro0209"><i class="fab fa-x-twitter"></i></a>
+				<a id="facebook" href="https://www.facebook.com/hiro0209.blacksquare"><i class="fab fa-facebook"></i></a>
+			</div>
+			<h1 id="topmessage">Welcome to Portfolio.<br>I'm Hiroto Sudo</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="nav_home">HOME</a></li>
+				<li><a onClick="changePage('profile', 'home');" class="nav_profile">PROFILE</a></li>
+				<li><a onClick="changePage('content', 'home');" class="nav_content">CONTENT</a></li>
+				<li><a onClick="changePage('contact', 'home');" class="nav_contact">CONTACT</a></li>
+				<!--<li><a onClick="changePage('publicity', 'home');" class="nav_publicity">PUBLICITY</a></li>-->
+			</ul>
+		</nav>
+	</section>
+
+	<section class="profile">
+		<div class="wrap">
+			<div class="introduction">
+				<h2 class="title">Self Introduction</h2>
+				<div class="title-underline"></div>
+				<div class="textarea" id="status">
+					<!-- <dl>
+						<dt class="type">名前</dt>
+						<dd class="data">須藤&nbsp;寛人</dd>
+						<dt class="type">誕生年</dt>
+						<dd class="data">2000年（平成12年）</dd>
+						<dt class="type">住所</dt>
+						<dd class="data">埼玉県&nbsp;川越市</dd>
+						<dt class="type">所属</dt>
+						<dd class="data">読売理工医療福祉専門学校クロスメディア情報学科</dd>
+						<dt class="type last-text">趣味</dt>
+						<dd class="data last-text">プログラミング・ゲーム・機械いじり</dd>
+					</dl>
+					<dl>
+						<dt class="type">年齢</dt>
+						<dd class="data">23歳</dd>
+						<dt calss="type">誕生日</dt>
+						<dd class="data">2月9日</dd>
+						<dt class="type">国籍</dt>
+						<dd class="data">日本</dd>
+						<dt class="type">出身校</dt>
+						<dd class="data">読売理工医療福祉専門学校クロスメディアじょう</dd>
+						<dt class="type">好物</dt>
+						<dd class="data">ぶどう・ラーメン・いくら</dd>
+					</dl> -->
+          <dl>
+						<dt class="type">名前</dt>
+						<dd class="data">須藤&nbsp;寛人</dd>
+						<dt class="type">誕生年</dt>
+						<dd class="data">2000年（平成12年）</dd>
+						<dt class="type">住所</dt>
+						<dd class="data">神奈川県&nbsp;相模原市&nbsp;緑区</dd>
+						<dt class="type last-text">趣味</dt>
+						<dd class="data last-text">野球観戦・ソフトボール・ゲーム</dd>
+            <dt class="type last-text">出身校</dt>
+            <dd class="data last-text">読売理工医療福祉専門学校クロスメディア情報学科</dd>
+					</dl>
+					<dl>
+						<dt class="type">年齢</dt>
+						<dd class="data">23歳</dd>
+						<dt calss="type">誕生日</dt>
+						<dd class="data">2月9日</dd>
+						<dt class="type">国籍</dt>
+						<dd class="data">日本</dd>
+						<dt class="type">好物</dt>
+						<dd class="data">お酒・ラーメン・ハンバーグ</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="comment">
+				<h2 class="title">Comment</h2>
+				<div class="title-underline"></div>
+				<div class="textarea">
+          <p>当ポートフォリオをご覧いただきありがとうございます。</p>
+          <p>フリーランスITエンジニアの須藤と申します。どうぞよろしくお願いします。(現在転職活動中)</p>
+          <p>埼玉県の公立普通科高校卒業後、当時趣味でやっていたプログラミングを仕事でつかえるものに昇華させるべくITの専門学校に入学・卒業。その後知人に誘われWEB3を使ったコンテンツを制作する会社の立ち上げに参加、業務委託契約のフルスタックエンジニアとして勤務してまいりました。</p>
+          <p>現在は生活の安定化を求めて転職活動中になります。</p>
+          <p>将来は一人でなんでもできるようなマルチクリエイターになるのが夢です。</p>
+          <br>
+          <p>当ポートフォリオは専門学校時代に作ったものなのであまりクオリティは高くないですがご愛嬌...</p>
+          <p>(ちなみにトップ画面の自撮り写真は専門学校時代のものになるので約5年前の写真です)</p>
+				  <!-- <p>こんにちは。現在東京都港区にある読売理工医療福祉専門学校のクロスメディア情報学科に毎日2時間かけて通っている自称プログラマーの専門学生です。クラスメイトは22人中19人留学生というかなりグローバルな環境で毎日文化や意識の違いなどで苦労しながら過ごしています。</p><br>
+				  <p>クラスで唯一、入学前に約２年のプログラミング歴を持っていたアドバンテージはありましたが苦労してないわけではなく、他のクラスメイトはみんな特にデザインセンスがよく、自分はそういったセンスに乏しいので見習いたいくらいです。</p><br>
+					<p>将来は、一流のIT企業かゲーム会社に勤めて、自分の特技を活かして多くの人に楽しんでもらいたい、ワクワクさせたいと考えています。</p>
+					<p>今の課題は、iOSアプリを作れるようになることと、英語があまり得意ではないので英語をもっとしっかり勉強したいですね。</p> -->
+			  </div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content">
+		<div class="wrap">
+			<div class="contents">
+				<h2 class="title">My Contents</h2>
+				<div class="title-underline"></div>
+				<div class="container">
+          <div class="content-box">
+            <a class="content-title" rel="noreferrer noopener" href="https://drive.google.com/file/d/1YQBlfBP2-SZIGUkIXHb5LJ6nULWthynL/view?usp=drive_link" target="_blank">
+              <h3>Skywars Pilot</h3>
+            </a>
+            <div class="textarea">
+              <p>
+                高校生の時に趣味で作った簡単な2Dシューティングゲームです。<br>
+                戦闘機を動かして敵の戦闘機を撃墜しながらタイムリミットまで耐えてスコアを競うものになっています。<br>
+                Android限定です。(更新していないので動作保証無し)<br>
+              </p>
+            </div>
+            <video class="content-image" controls>
+              <source type="video/mp4" src="images/skywarspilot.mp4">
+              <a href="images/skywarspilot.mp4">ダウンロード</a>
+            </video>
+          </div>
+          <div class="content-box">
+						<a class="content-title" rel="noreferrer noopener" href="BeeS/BeeS/index.html" target="_blank"><h3>BeeS Group 公式サイト</h3></a>
+						<div class="textarea">
+							<p>
+                BeeSというエンジニア集団の公式サイトです。<br>
+                専門学校時代にはじめて人に頼まれて作ったコンテンツとなります。<br>
+                ただ現在はその団体創設の構想が停止しているので、このサイトも未完成のままストップしています。
+              </p>
+						</div>
+						<img class="content-image" src="images/BeeS.png" alt="サイトイメージ">
+					</div>
+          <div class="content-box">
+            <a class="content-title" rel="noreferrer noopener" href="yomiurikomuten/index.html" target="_blank">
+              <h3>読売工務店公式サイト</h3>
+            </a>
+            <div class="textarea">
+              <p>
+                専門学校の講義の一環で作った架空の工務店の公式サイトです。<br>
+                デザインに関しては指定があったので一昔前風になっています。<br>
+              </p>
+            </div>
+            <picture class="content-image">
+              <source type="image/webp" src="">
+              <img src="images/yomiurikomuten.png" alt="サイトイメージ">
+            </picture>
+          </div>
+          
+					<!-- <div class="content-box">
+						<a  class="content-title" href="https://ux.getuploader.com/hiro0209_mcpe_scriptmod/download/9/StorageBox+for+MCPE+(%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%83%9c%e3%83%83%e3%82%af%e3%82%b9)+ver+1.2.1.zip"><h3>StorageBox&nbsp;for&nbsp;MCPE</h3></a>
+						<div class="textarea">
+							<p>僕がMinecraft PEのModで一番力を入れていたものです。</p>
+							<p>一つの種類のアイテムを無限に収納できる<em>StorageBox</em>を追加するPC版MinecraftのMod製作者に許可をとって作成しました。</p>
+							<p>本家にはない何種類かの特別な機能をもったStorageBoxも追加しました。（承諾済み）</p>
+						</div>
+						<img class="content-image" src="images/StorageBox.png" alt="StorageBox&nbsp;for&nbsp;MCPE">
+					</div>
+					<div class="content-box">
+						<a class="content-title" href="https://ux.getuploader.com/hiro0209_mcpe_scriptmod/download/11/%e3%83%9e%e3%82%b0%e3%83%8a%e3%83%a0%e7%84%a1%e5%8f%8cMod.zip"><h3>マグナム無双Mod</h3></a>
+						<div class="textarea">
+							<p>Minecraft&nbsp;PEに、強力なマグナム銃５種類と３種類の弾丸を追加するModです。</p>
+						</div>
+						<img class="content-image" src="images/MugnumMusou.png" alt="マグナム無双Mod">
+					</div>
+					<div class="content-box">
+						<a class="content-title" href="https://ux.getuploader.com/hiro0209_mcpe_scriptmod/download/3/%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E8%A1%A8%E7%A4%BAMod.js"><h3>デバッグ表示Mod</h3></a>
+						<div class="textarea">
+							<p>当時Minecraft&nbsp;PEには座標の表示機能などがなく、不便だという問題がありました。そこで作ったのがこのModで、PC版のデバッグ機能で表示できる内容をできる限り表示するModです。</p>
+						</div>
+						<img class="content-image" src="images/ShowDebug.png" alt="デバッグ表示Mod">
+					</div>
+					<div class="content-box">
+						<a class="content-title" href="BeeS/BeeS/index.html"><h3>BeeS&nbsp;Group&nbsp;公式サイト</h3></a>
+						<div class="textarea">
+							<p>BeeSというエンジニア集団の公式サイトです。はじめて人に頼まれて作ったコンテンツとなります。ただ、現在はその団体創設の構想が停止しているので、このサイトも途中までしか作り終えていません。</p>
+						</div>
+						<img class="content-image" src="images/BeeS.png" alt="BeeS&nbsp;Group公式サイト">
+					</div>
+					<div class="content-box">
+						<a class="content-title" href="http://jsdo.it/yxmedia181007/UMAq"><h3>くまのリンゴとりゲーム</h3></a>
+						<div class="textarea">
+							<p>授業でjsdo.itというサイトで作った、くまのリンゴとりゲームです。オリジナル要素として、リンゴ以外にも空から降ってくるいろいろなアイテムを駆使して、爆弾に気を付けながら高得点を目指すゲームに仕立てました。</p>
+						</div>
+						<img class="content-image" src="images/bearapple.png" alt="くまのリンゴとりゲーム">
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact">
+		<div class="wrap">
+			<div class="sns-links">
+				<h2 class="title">SNS Links</h2>
+				<div class="title-underline"></div>
+				<div class="textarea">
+          <a class="googleplus" href="https://plus.google.com/u/0/100743151085824122879"><i class="fab fa-google-plus"></i></a>
+          <a class="twitter" href="https://x.com/sudo_hiro0209"><i class="fab fa-x-twitter"></i></a>
+          <a class="facebook" href="https://www.facebook.com/hiro0209.blacksquare"><i class="fab fa-facebook"></i></a>
+				</div>
+			</div>
+			<div class="mail-address">
+				<h2 class="title">Mail Address</h2>
+				<div class="title-underline"></div>
+        <address>s.hiroto0209.business@gmail.com</address>
+				<!-- <address>budouraamen0209@gmail.com</address>
+				<address>yxmedia181007@gmail.com</address> -->
+			</div>
+		</div>
+	</section>
+
+	<!--<div class="publicity">
+	</div>-->
+
+	<div class="pagelist">
+		<div class="wrap">
+			<nav>
+				<ul>
+					<li><a onClick="changePage('home', 'pagelist');" class="nav_home">HOME</a></li>
+					<li><a onClick="changePage('profile', 'pagelist');" class="nav_profile">PROFILE</a></li>
+					<li><a onClick="changePage('content', 'pagelist');" class="nav_content">CONTENT</a></li>
+					<li><a onClick="changePage('contact', 'pagelist');" class="nav_contact">CONTACT</a></li>
+					<li><a onClick="changePage('publicity', 'pagelist');" class="nav_publicity">PUBLICITY</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</main>
+
+<!--JavScript-->
+<script src="js/animation.js"></script>
+<script src="js/style.js"></script>
+</body>
+</html>

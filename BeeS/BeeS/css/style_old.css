@@ -1,0 +1,887 @@
+@charset "UTF-8";
+
+/* Webフォント適用 */
+@font-face {
+	font-family: "源ノ明朝 JP Medium";
+	src: url(../font/SourceHanSerifJP-Medium.otf);
+}
+@font-face {
+	font-family: "はれのそら明朝";
+	src: url(../font/Harenosora.otf);
+}
+@font-face {
+	font-family: "IPA 明朝";
+	src: url(../font/ipam.ttf);
+}
+
+/* PCレイアウト */
+@media screen and (min-width: 1531px) {
+	body {
+		width: 100%;
+	}
+	#background {
+		width: 100%;
+		height: 100vh;
+		background: linear-gradient(90deg, black, black, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/back.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	header {
+		width: 100%;
+		height: 100vh;
+	}
+	header h1 {
+		width: 195px;
+		height: 108px;
+	}
+	header h1 img {
+		width: 192px;
+		height: 104px;
+	}
+	
+	/* ナビゲーション */
+	header ul {
+		width: 580px;
+		height: 540px;
+		position: absolute;
+		top: 25vh;
+		left: 7vw;
+		z-index: 1;
+	}
+	#backling {
+		width: 520px;
+		height: 480px;
+		border-radius: 50%;
+		border: 2px solid aqua;
+		position: absolute;
+		top: 30vh;
+		left: 8.7vw;
+		z-index: 0;
+	}
+	header ul li {
+		width: 180px;
+		height: 180px;
+		padding: 10px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 166, 0, 0.5));
+		border-radius: 50%;
+	}
+	#nav_home {
+		margin: 0 auto;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_company {
+		position: relative;
+		top: 140px;
+		left: 380px;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_contact {
+		position: relative;
+		top: -60px;
+		left: 0;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_home a {
+		display: block;
+		width: 170px;
+		height: 170px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 30px;
+		line-height: 170px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	#nav_company a {
+		display: block;
+		width: 170px;
+		height: 170px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 30px;
+		line-height: 170px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	#nav_contact a {
+		display: block;
+		width: 170px;
+		height: 170px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 30px;
+		line-height: 170px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	
+	/* キャッチコピー */
+	#catchcopy {
+		width: 40%;
+		height: 60%;
+		position: relative;
+		top: 10vh;
+		left: 46vw;
+		text-align: center;
+	}
+	#catchcopy h2 {
+		color: white;
+		font-size: 200pt;
+		font-family: "MV Boli"
+	}
+	#catchcopy p {
+		color: white;
+		font-size: 25pt;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		line-height: 90px;
+	}
+
+	
+	/* メインコンテンツ */
+	#content {
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		display: flex;
+	}
+	aside {
+		width: 20%;
+		background-color: rgba(77,77,77,1.00);
+		background-image: linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+		box-shadow: 3px 3px 4px black;
+	}
+	main {
+		width: 80%;
+	}
+	.title {
+		width: 80%;
+		border: 2px solid cyan;
+		border-radius: 50px;
+		padding: 16px;
+		line-height: 12px;
+		margin: 0 auto;
+		font-size: 14pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+	}
+	#updates {
+		margin: 20px auto 10px auto;
+		color: white;
+	}
+	#update_list {
+		width: 80%;
+		margin: 10px auto 0 auto;
+	}
+	#update_list li {
+		font-size: 14pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		margin-top: 20px;
+	}
+	.date {
+		padding-top: 10px;
+		color: cyan;
+	}
+	.data {
+		padding-bottom: 10px;
+		color: white;
+	}
+	#oldupdate {
+		float: right;
+		margin: 15px 5% 0 0;
+	}
+	#summarys {
+		visibility: hidden;
+	}
+	.subtitle {
+		width: 40%;
+		font-size: 15pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 40px;
+		border-top: black groove 4px;
+		border-left: cyan solid 2px;
+		border-bottom: cyan solid 2px;
+		padding-left: 10px;
+		text-align: left;
+		color: black;
+		margin-left: 100px;
+	}
+	.text {
+		width: 80%;
+		line-height: 32px;
+		margin: 20px auto;
+		color: black;
+		font-size: 15pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		letter-spacing: 5px;
+	}
+	.summary {
+		margin-top: 40px;
+	}
+	#last_summary {
+		margin-bottom: 60px;
+	}
+	
+	/* スタートアニメーション */
+	#start_super {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		display: table;
+	}
+	#start_back {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#start_ball {
+		width: 100px;
+		height: 100px;
+		background-color: white;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#start_super2 {
+		width: 100%;
+		height: 100%;
+		display: table;
+	}
+	#start_back2 {
+		width: 100%;
+		height: 100%;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#start_logo {
+		width: 60%;
+		height: 60%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	/* フッター */
+	footer {
+		background-color: rgba(38,38,38,1.00);
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#recruit {
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		color: white;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+	#recruit a {
+		color: aqua;
+	}
+	#menu-line {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(18,18,18,1.00);
+	}
+	#menu {
+		height: 140px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		margin-left: 45px;
+	}
+	#menu ul {
+		text-align: left;
+		margin-right: 30px;
+	}
+	#menu ul li a {
+		display: block;
+		line-height: 40px;
+		color: white;
+		text-decoration: none;
+	}
+	#copyright {
+		color: darkgray;
+	}
+}
+
+/* 小さいめのPC等 */
+@media screen and (min-width: 1025px) and (max-width: 1530px) {
+	body {
+		width: 100%;
+	}
+	#background {
+		width: 100%;
+		height: 100vh;
+		background: linear-gradient(90deg, black, black, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url(../images/back.jpg);
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+	header {
+		width: 100%;
+		height: 100vh;
+	}
+	header h1 {
+		width: 100%;
+		height: calc(114px + 5vh);
+	}
+	header h1 img {
+		width: 192px;
+		height: 104px;
+		margin-top: 5vh;
+		margin-left: 5vw;
+	}
+	
+	/* ナビゲーション */
+	header ul {
+		width: 500px;
+		height: 450px;
+		position: absolute;
+		top: 22vh;
+		left: 7vw;
+		z-index: 1;
+	}
+	#backling {
+		width: 430px;
+		height: 380px;
+		border-radius: 50%;
+		border: 2px solid aqua;
+		position: absolute;
+		top: 28vh;
+		left: 9.4vw;
+		z-index: 0;
+	}
+	header ul li {
+		width: 160px;
+		height: 160px;
+		padding: 10px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 166, 0, 0.5));
+		border-radius: 50%;
+	}
+	#nav_home {
+		margin: 0 auto;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_company {
+		position: relative;
+		top: 90px;
+		left: 320px;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_contact {
+		position: relative;
+		top: -90px;
+		left: 0;
+		box-shadow: 
+			1px 1px 5px 1px white,
+			-1px -1px 5px 1px white,
+			-1px 1px 5px 1px white,
+			1px -1px 5px 1px white;
+	}
+	#nav_home a {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 20pt;
+		line-height: 150px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	#nav_company a {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 20pt;
+		line-height: 150px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	#nav_contact a {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border: 2px solid cyan;
+		border-radius: 50%;
+		text-align: center;
+		text-decoration: none;
+		color: cyan;
+		font-size: 20pt;
+		line-height: 150px;
+		position: relative;
+		top: 5px;
+		left: 3px;
+		text-shadow: 
+			2px 2px rgba(255, 255, 255, 0.5), 
+			-2px 2px rgba(255, 255, 255, 0.5), 
+			2px -2px rgba(255, 255, 255, 0.5), 
+			-2px -2px rgba(255, 255, 255, 0.5), 
+			2px 0 rgba(255, 255, 255, 0.5), 
+			0 2px rgba(255, 255, 255, 0.5), 
+			-2px 0 rgba(255, 255, 255, 0.5), 
+			0 -2px rgba(255, 255, 255, 0.5);
+	}
+	
+	/* キャッチコピー */
+	#catchcopy {
+		width: 40%;
+		height: 60%;
+		position: relative;
+		top: 1vh;
+		left: 50vw;
+		text-align: center;
+	}
+	#catchcopy h2 {
+		color: white;
+		font-size: 140pt;
+		font-family: "MV Boli"
+	}
+	#catchcopy p {
+		color: white;
+		font-size: 20pt;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		line-height: 90px;
+	}
+	
+	/* メインコンテンツ */
+	#content {
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		display: flex;
+	}
+	aside {
+		width: 20%;
+		background-color: rgba(77,77,77,1.00);
+		background-image: linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+		box-shadow: 3px 3px 4px black;
+	}
+	main {
+		width: 80%;
+	}
+	.title {
+		width: 80%;
+		border: 2px solid cyan;
+		border-radius: 50px;
+		padding: 16px;
+		line-height: 10px;
+		margin: 0 auto;
+		font-size: 12pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+	}
+	#summarys {
+		visibility: hidden;
+	}
+	#updates {
+		margin: 20px auto 0 auto;
+		color: white;
+	}
+	#update_list {
+		width: 80%;
+		margin: 10px auto 0 auto;
+	}
+	#update_list li {
+		line-height: 32px;
+		font-size: 11pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+	}
+	.date {
+		color: cyan;
+	}
+	.data {
+		padding-bottom: 10px;
+		color: white;
+	}
+	#oldupdate {
+		float: right;
+		margin: 0 10% 40px 0;
+	}
+	.subtitle {
+		width: 40%;
+		font-size: 12pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 35px;
+		border-top: black groove 4px;
+		border-left: cyan solid 2px;
+		border-bottom: cyan solid 2px;
+		padding-left: 10px;
+		text-align: left;
+		color: black;
+		margin-left:100px;
+	}
+	.text {
+		width: 80%;
+		line-height: 25px;
+		margin: 20px auto;
+		color: black;
+		font-size: 11pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		letter-spacing: 5px;
+	}
+	.summary {
+		margin-top: 40px;
+	}
+	#last_summary {
+		margin-bottom: 60px;
+	}
+	
+	/* スタートアニメーション */
+	#start_super {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		display: table;
+	}
+	#start_back {
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#start_ball {
+		width: 100px;
+		height: 100px;
+		background-color: white;
+		border-radius: 50%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#start_super2 {
+		width: 100%;
+		height: 100%;
+		display: table;
+	}
+	#start_back2 {
+		width: 100%;
+		height: 100%;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+	#start_logo {
+		width: 60%;
+		height: 60%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	/* フッター */
+	footer {
+		background-color: rgba(38,38,38,1.00);
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#recruit {
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		color: white;
+		font-size: 14pt;
+		font-weight: bold;
+	}
+	#recruit a {
+		color: aqua;
+	}
+	#menu-line {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(18,18,18,1.00);
+	}
+	#menu {
+		height: 140px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		margin-left: 45px;
+	}
+	#menu ul {
+		text-align: left;
+		margin-right: 30px;
+	}
+	#menu ul li a {
+		display: block;
+		line-height: 40px;
+		color: white;
+		text-decoration: none;
+	}
+	#copyright {
+		color: darkgray;
+	}
+}
+
+/* スマホ・タブレットレイアウト */
+@media screen and (max-width: 1024px){
+	body {
+		width: 100%;
+		background: url(../images/back.jpg);
+		background-position: -100px;
+		background-attachment: fixed;
+	}
+	#bg_mask {
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	header h1 {
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		height: 104px;
+		background-color: gray;
+		z-index: 1;
+	}
+	#navbutton {
+		display: none;
+	}
+	
+	/* ナビゲーション */
+	header nav ul {
+		position: fixed;
+		top: 104px;
+		overflow: hidden;
+		width: calc(100% - 2px);
+		height: 40px;
+		margin: 0 auto;
+		background: linear-gradient(90deg, black, gray, black);
+		border: 1px solid yellow;
+		z-index: 1;
+	}
+	header nav ul li {
+		float: left;
+		width: calc(100% / 3);
+		line-height: 40px;
+		text-align: center;
+	}
+	#nav_home a {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	#nav_company a {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	#nav_contact a {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	
+	/* キャッチコピー */
+	#catchcopy h2 {
+		text-align: center;
+		font-size: 60pt;
+		font-family: "MV Boli";
+		color: white;
+		text-shadow: 
+			2px 2px black,
+			-2px -2px black,
+			-2px 2px black,
+			2px -2px black,
+			5px 4px gray;
+		position: relative;
+		top: 144px;
+		z-index: 0;
+	}
+	#catchcopy p {
+		text-align: center;
+		line-height: 30px;
+		font-size: 18px;
+		color: white;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		position: relative;
+		top: 124px;
+		z-index: 0;
+	}
+	
+	/* メインコンテンツ */
+	#content {
+		margin-top: 144px;
+	}
+	.title {
+		line-height: 35px;
+		background: linear-gradient(-30deg, rgba(255, 255, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 0, 0.8));
+		color: black;
+		width: 60%;
+		border-radius: 0 30px 30px 0;
+		margin-top: 20px;
+		padding-left: 10px;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		font-size: 13pt;
+	}
+	#update {
+		display: none;
+	}
+	.subtitle {
+		width: 50%;
+		font-size: 12pt;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		line-height: 28px;
+		border-left: cyan solid 1px;
+		border-bottom: cyan solid 1px;
+		border-top: white groove 1px;
+		padding-left: 10px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		color: white;
+	}
+	.text {
+		color: white;
+		margin: 2px auto 0 auto;
+		padding: 0 10px;
+		font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		font-size: 10pt;
+	}
+	footer {
+		background-color: rgba(38,38,38,1.00);
+		margin-top: 20px;
+	}
+	#recruit {
+		text-align: center;
+		font-weight: bold;
+		font-size: 11pt;
+		color: yellow;
+		padding-top: 5px;
+	}
+	#recruit a {
+		color: aqua;
+	}
+	#menu-line {
+		width: 100%;
+		height: 1px;
+		backgound-color: rgba(18, 18, 18, 1.00);
+	}
+	#menu {
+		margin-top: 5px;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		margin-left: 15px;
+	}
+	#menu ul {
+		text-align: left;
+		margin-right: 10px;
+	}
+	#menu ul li a {
+		display: block;
+		font-size: 1pt;
+		text-decoration: none;
+		color: white;
+	}
+	#copyright {
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: gray;
+		font-size: 2pt;
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+}

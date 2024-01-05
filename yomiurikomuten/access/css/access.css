@@ -1,0 +1,70 @@
+/* Access Style */
+
+.container {
+	width: 100%;
+	height: 404px;
+	background-color: #A2A2A2;
+	border-radius: 32px;
+	margin-bottom: 28px;
+	box-shadow: 0 2px 2px 1px lightgray;
+}
+
+.container2 {
+	display: inline-block;
+	width: calc(100% - 4px);
+	height: 400px;
+	margin-top: 2px;
+	margin-left: 2px;
+	border-radius: 30px;
+	background-color: white;
+	text-align: center;
+}
+
+.loding {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loding div {
+	width: 20px;
+	height: 20px;
+	margin-left: 12px;
+	margin-right: 12px;
+	background-color: #3C3C3C;
+	border-radius: 50%;
+}
+
+.loding div:not(:nth-child(2)) {
+	animation: loding 0.3s ease 0s infinite alternate running;
+}
+
+.loding div:nth-child(2) {
+	animation: loding 0.3s ease infinite alternate-reverse running;
+}
+
+#googlemap {
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	position: relative;
+	z-index: 1;
+	bottom: 400px;
+}
+
+.section-body ul {
+	list-style: disc;
+	padding-left: 20px;
+}
+
+@keyframes loding {
+	0% {
+		transform:  scale(1.3);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}

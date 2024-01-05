@@ -1,0 +1,128 @@
+/* Inquiry Form Style */
+
+/* Form Inputs */
+.section-body form {
+	width: calc(100% - 82px);
+	margin-top: 26px;
+	border-radius: 8px;
+	border: solid 2px #98C955;
+	padding: 38px;
+}
+
+.section-body form table {
+	width: 100%;
+}
+
+.section-body form tr {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.section-body form tr:not(:last-child) {
+	border-bottom: dashed 2px #3C3C3C;
+}
+
+.section-body form tr th {
+	display: block;
+	text-align: left;
+	font-size: 1rem;
+	flex: 2
+}
+
+.section-body form tr td {
+	display: block;
+	padding-left: 12px;
+	border-left: dashed 2px #3C3C3C;
+	flex: 3;
+}
+
+.section-body form tr:not(:first-child) td {
+	padding-top: 12px;
+}
+
+.section-body form tr:not(:last-child) td {
+	padding-bottom: 12px;
+}
+
+.section-body form tr td input, .section-body form tr td textarea {
+	width: 100%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	line-height: 1rem;
+	font-size: 1rem;
+	color: #3C3C3C;
+	font-family: 'メイリオ', sans-serif;
+}
+
+.required {
+	color: red;
+}
+
+.any {
+	color: #309BFF;
+}
+
+.section-body form table tr th br {
+	display: none;
+}
+
+/* Form Submits */
+.form-buttons {
+	width: calc(37.25% - 8px);
+	min-width: 224px;
+	margin-top: 48px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-buttons input {
+	width: 40%;
+	min-width: 100px;
+	height: 48px;
+	border-radius: 5px;
+	border: solid 2px #98C955;
+	background-color: white;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.form-buttons input:first-child {
+	margin-right: 8px;
+	color: #309BFF;
+}
+
+.form-buttons input:last-child {
+	margin-left: 8px;
+	color: red;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 599px) {
+	/* Form Inputs */
+	.section-body form {
+		width: calc(100% - 32px);
+		padding: 16px;
+	}
+	
+	.section-body form table tr th, .section-body form table tr td {
+		font-size: 0.9rem;
+	}
+	
+	.section-body form table tr th br {
+		display: inline;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	/* Form Inputs */
+	.section-body form {
+		width: calc(100% - 32px);
+		padding: 16px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	
+}

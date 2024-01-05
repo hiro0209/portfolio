@@ -1,0 +1,18 @@
+/* Style Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+img {
+	display: block;
+}

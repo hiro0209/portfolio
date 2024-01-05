@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+/* Webフォント適用 */
+@font-face {
+	font-family: "源ノ明朝 JP Medium";
+	src: url(../font/SourceHanSerifJP-Medium.otf);
+}
+@font-face {
+	font-family: "はれのそら明朝";
+	src: url(../font/Harenosora.otf);
+}
+@font-face {
+	font-family: "IPA 明朝";
+	src: url(../font/ipam.ttf);
+}
+
+/* 共通 */
+footer a {
+	text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+
+/* PCレイアウト */
+@media screen and (min-width: 1025px) {
+	body {
+		width: 100%;
+		background: linear-gradient(90deg, rgba(200, 200, 200, 1.0), rgba(230, 230, 230, 1.0), white, rgba(230, 230, 230, 1.0), rgba(200, 200, 200, 1.0));
+	}
+	header nav {
+		width: 100%;
+		height: 66px;
+		background-color: black;
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+	}
+	#logo {
+		padding: 5px;
+		float: left;
+	}
+	header nav ul {
+		float: right;
+		display: flex;
+		overflow: hidden;
+	}
+	header nav ul li {
+		width: 200px;
+		height: 100%;
+		text-align: center;
+	}
+	header nav ul li a {
+		display: block;
+		width: 100%;
+		height: 66px;
+		line-height: 62px;
+		text-decoration: none;
+		color: white;
+		font-size: 12pt;
+	}
+	.under-line {
+		width: 0;
+		height: 4px;
+		background-color: rgba(0,166,180,1.00);
+		margin: 0 auto;
+	}
+	#header-image-back {
+		background-color: black;
+	}
+	#header-image {
+		width: 80%;
+		height: 700px;
+		background: linear-gradient(black, rgba(0,0,0,0.9), rgba(0,0,0,0.5), rgba(0,0,0,0)), url(../images/header.jpg);
+		background-position: 0;
+		margin: 0 auto;
+	}
+	#header-image p {
+		text-align: center;
+		color: rgba(0,166,180,1.00);
+		line-height: 700px;
+		font-size: 100pt;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+		text-shadow: 4px 4px 2px yellow;
+	}
+	
+	/* メインコンテンツ */
+	main {
+		width: 70%;
+		margin: 0 auto;
+	}
+	.title {
+		width: 80%;
+		line-height: 1.5em;
+		background: linear-gradient(45deg, yellow, white, yellow);
+		color: rgba(0,166,180,1.00);
+		text-align: center;
+		margin: 20px auto 0 auto;
+	}
+	.textgroup {
+		width: 100%;
+		padding: 20px;
+	}
+	.textgroup-type2 {
+		width: 80%;
+		margin: 20px auto;
+		border-bottom: 1px dotted black;
+	}
+	.textgroup-type2 p {
+		width: calc(100% - 40px);
+		font-size: 15pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 2em;
+		padding-left: 20px;
+		padding-right: 20px;
+		letter-spacing: 5px;
+		border-top: 1px dotted black;
+	}
+	.textgroup-type2 p span {
+		color: rgba(0,166,180,1.00);
+		font-weight: bold;
+		margin-right: 10%;
+	}
+	.subtitle {
+		width: 40%;
+		font-size: 15pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 2em;
+		border-top: black groove 4px;
+		border-left: rgba(0,166,180,1.00) solid 2px;
+		border-bottom: rgba(0,166,180,1.00) solid 2px;
+		border-radius: 0 0 0 10px;
+		padding-left: 10px;
+		text-align: left;
+		color: black;
+		margin-left: 100px;
+	}
+	.subsubtitle {
+		font-size: 14pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 1.5em;
+		margin: 10px 0 0 10%;
+	}
+	.text {
+		width: 80%;
+		line-height: 32px;
+		margin: 0 auto;
+		color: black;
+		font-size: 12pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		letter-spacing: 5px;
+	}
+	.list {
+		width:  80%;
+		margin: 0 auto;
+		list-style-type: inherit;
+	}
+	.list li {
+		margin-left: 40px;
+		font-size: 15pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 2em;
+		letter-spacing: 5px;
+	}
+	
+	/* フッター */
+	footer {
+		width: 100%;
+		background-color: rgba(38,38,38,1.00);
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	#backtop img {
+		width: 50px;
+		height: 50px;
+	}
+	#menu-line {
+		width: 100%;
+		height: 1px;
+		background-color: rgba(18,18,18,1.00);
+	}
+	#menu {
+		height: 140px;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		margin-left: 45px;
+	}
+	#menu ul {
+		text-align: left;
+		margin-right: 30px;
+	}
+	#menu ul li a {
+		display: block;
+		line-height: 40px;
+		color: white;
+	}
+	#copyright {
+		color: darkgray;
+	}
+}
+
+/* スマホ・タブレットレイアウト */
+@media screen and (max-width: 1024px) {
+	body {
+		width: 100%;
+		height: 100vh;
+		background: url(../images/back.jpg);
+		background-position: -100px;
+		background-attachment: fixed;
+	}
+	#bg_mask {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		background-attachment: fixed;
+	}
+	#navbutton {
+		display: none;
+	}
+	
+	/* ナビゲーション */
+	#logobox {
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		height: 104px;
+		background-color: gray;
+		z-index: 1;
+	}
+	header nav ul {
+		display: flex;
+		position: fixed;
+		top: 104px;
+		overflow: hidden;
+		width: calc(100% - 2px);
+		height: 40px;
+		margin: 0 auto;
+		background: linear-gradient(90deg, black, gray, black);
+		border: 1px solid yellow;
+		z-index: 1;
+	}
+	header nav ul li {
+		width: calc(100% / 2);
+		line-height: 40px;
+		text-align: center;
+	}
+	#nav_home {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	#nav_company {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	#nav_contact {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		height: 100%;
+		color: cyan;
+	}
+	
+	/* メインコンテンツ */
+	main {
+		margin-top: 144px;
+		padding-bottom: 20px;
+	}
+	.title {
+		line-height: 35px;
+		background: linear-gradient(-30deg, rgba(255, 255, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(255, 255, 0, 0.8));
+		color: black;
+		width: 60%;
+		border-radius: 0 30px 30px 0;
+		margin-top: 20px;
+		padding-left: 10px;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		font-size: 13pt;
+	}
+	.textgroup {
+		padding: 0 20px;
+	}
+	.textgroup-type2 {
+		width: calc(100% - 20px);
+		margin: 20px auto;
+		border-bottom: 1px dotted white;
+	}
+	.textgroup-type2 p {
+		font-size: 10pt;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		line-height: 2em;
+		border-top: 1px dotted white;
+	}
+	.textgroup-type2 p span {
+		color: aqua;
+		font-weight: bold;
+		margin-right: 10px;
+	}
+	.subtitle {
+		width: 50%;
+		font-size: 13pt;
+		font-family: "源ノ明朝 JP Medium", "はれのそら明朝", "IPA 明朝", "ＭＳ Ｐ明朝";
+		line-height: 2em;
+		border-left: cyan solid 1px;
+		border-bottom: cyan solid 1px;
+		border-top: white groove 1px;
+		border-radius: 0 0 0 10px;
+		padding-left: 10px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		color: white;
+	}
+	.text {
+		color: white;
+		margin: 2px auto 0 auto;
+		padding: 0 20px;
+		font-family:  "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+		font-size: 10pt;
+	}
+	.subtextgroup {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.subsubtitle {
+		color: #FFBE00;
+		padding-left: 10px;
+	}
+	.list {
+		margin: 0 auto;
+		list-style-type: inherit;
+		list-style-image: url(../images/listmark1.png);
+	}
+	.list li {
+		margin-left: 40px;
+		font-size: 11pt;
+		line-height: 2em;
+		letter-spacing: 5px;
+	}
+	.list li a {
+		color: aqua;
+	}
+	
+	/* フッター */
+	footer {
+		width: 100%;
+		background-color: rgba(38,38,38,1.00);
+		text-align: center;
+	}
+	footer a {
+		text-decoration: underline;
+	}
+	#backtop img {
+		width: 40px;
+		height: 40px;
+	}
+	#menu {
+		display: flex;
+		margin-top: 5px;;
+		justify-content: center;
+		overflow: hidden;
+		margin-left: 15px;
+	}
+	#menu ul {
+		text-align: left;
+		margin-right: 10px;
+	}
+	#menu ul li a {
+		display: block;
+		font-size: 10pt;
+		line-height: 30px;
+		color: white;
+	}
+	#copyright {
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: gray;
+		font-size: 4pt;
+		margin-top: 10px;
+		padding-bottom: 10px;
+	}
+}

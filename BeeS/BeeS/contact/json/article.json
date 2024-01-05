@@ -1,0 +1,28 @@
+[
+	{
+		"id": 1,
+		"title": "企業連絡先",
+		"content": [
+			{
+				"id": 1,
+				"subtitle": false,
+				"name": "Gメール",
+				"data": "",
+				"link": false
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "個人連絡先",
+		"content": [
+			{
+				"id": 1,
+				"subtitle": "代表　三谷翔輝",
+				"name": "Google+",
+				"data": "Deep blue Cylindrical column (MitaniShoki)",
+				"link": "https://plus.google.com/u/1/107971093965380558665"
+			}
+		]
+	}
+]
